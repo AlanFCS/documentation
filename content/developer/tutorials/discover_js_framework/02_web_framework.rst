@@ -162,11 +162,11 @@ Here is a short explanation on the various arguments:
 4. Cache network calls, create a service
 ========================================
 
-If you open your browser dev tools, in the network tabs, you will probably see that the call to
-`/awesome_tshirt/statistics` is done every time the client action is displayed. This is because the
-`onWillStart` hook is called each time the `Dashboard` component is mounted. But in this case, we
-would probably prefer to do it only the first time, so we actually need to maintain some state
-outside of the `Dashboard` component. This is a nice use case for a service!
+If you open the :guilabel:`Network` tab of your browser's dev tools, you will probably see that the
+call to `/awesome_tshirt/statistics` is done every time the client action is displayed. This is
+because the `onWillStart` hook is called each time the `Dashboard` component is mounted. But in this
+case, we would probably prefer to do it only the first time, so we actually need to maintain some
+state outside of the `Dashboard` component. This is a nice use case for a service!
 
 .. example::
 
