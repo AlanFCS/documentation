@@ -1,35 +1,39 @@
 .. _tutorials/getting_started/04_basicmodel:
 
-==================================
-Chapter 4: Models And Basic Fields
-==================================
+=====================================
+Capitulo 4: Modelos y Campos Basicos
+=====================================
 
-At the end of the :ref:`previous chapter <tutorials/getting_started/03_newapp>`, we were able to
-create an Odoo module. However, at this point it is still an empty shell which doesn't allow us to
-store any data. In our real estate module, we want to store the information related to the
-properties (name, description, price, living area...) in a database. The Odoo framework provides
-tools to facilitate database interactions.
+Al final del :ref:`previous chapter <tutorials/getting_started/03_newapp>`, Fuimos Capaces
+de crear un modulo. De Cualquier manera, en este momento es un caparazon vacio que no nos permite
+almacenar ningun dato. en nuestro modulo real estate, nosotrso queremos almacenar informacion relacionada a las
+propiedades (Nombre, Descripcion, Precio, Areas de Vivienda...) en una base de Datos. el marco de trabajo, de Odoo otorga
+herramientas pra la interaccion con la base de Datos.
 
-Before moving forward in the exercise, make sure the ``estate`` module is installed, i.e. it
-must appear as 'Installed' in the Apps list.
+Antes de seguir avanzando en este ejercicio, asegurate que el modulo ``estate`` esta instalado, este
+deberia aparecer como instalado en nuestra lista de aplicaciones.
 
-.. warning::
+.. Advertencia::
 
-   Do not use mutable global variables.
+   No Utilices Variables globales cambiantes.
 
-   A single Odoo instance can run several databases in parallel within the same python process.
-   Distinct modules might be installed on each of these databases, therefore we cannot rely on
-   global variables that would be updated depending on installed modules.
+   Una sola instancia de Odoo puede correr varias bases de datos en paralelo dentro del mismo proceso de python.
+   Distintos modulos pueden ser instalados en cada una de estas bases de datos, Por lo tanto, no podemos depender de 
+   variables globales que se actualizarían según los módulos instalados.
 
-Object-Relational Mapping
-=========================
+Mapeo de Objetos-Relacionales 
+==============================
+.. Nota::
 
-**Reference**: the documentation related to this topic can be found in the
+    **ORM**: son las siglas del ingles de ``Object–relational mapping`` por lo que si vemos ORM, hace referencia al Mapeo 
+    de objetos-relacionales:
+
+**Referencia**: la documentacion relacionada a este tema lo puedes encontrar en Objects-related mapping
 :ref:`reference/orm/model` API.
 
-.. note::
+.. Nota::
 
-    **Goal**: at the end of this section, the table ``estate_property`` should be created:
+    **Meta**: Al final de esta seccion, la tabla ``estate_property`` deberia ser creada:
 
     .. code-block:: text
 
